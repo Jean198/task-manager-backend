@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const Task = require("./models/taskModel");
 const taskRoutes = require("./routes/taskRoute");
 const cors = require("cors");
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 10000;
 
 //Middleware
 app.use(express.json()); //This is enough when sending data only as json
