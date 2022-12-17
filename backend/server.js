@@ -22,7 +22,7 @@ app.use("/api/tasks", taskRoutes);
 
 //Mongoose connection and starting server
 mongoose
-  .connect(process.env.DATABASE)
+  .connect(process.env.DATABASE_URI)
   .then(() => {
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
