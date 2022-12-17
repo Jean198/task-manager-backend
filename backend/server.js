@@ -10,7 +10,11 @@ const PORT = process.env.PORT || 5000;
 //Middleware
 app.use(express.json()); //This is enough when sending data only as json
 app.use(express.urlencoded({ extended: false })); //When sending data as Form-data in postman
-app.use(cors());
+app.use(cors(
+  {
+origin:["http://local:3000", "https://task-manager-app.onrender.com"]
+}
+));
 app.use("/api/tasks", taskRoutes);
 
 
