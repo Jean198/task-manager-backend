@@ -12,7 +12,7 @@ app.use(express.json()); //This is enough when sending data only as json
 app.use(express.urlencoded({ extended: false })); //When sending data as Form-data in postman
 app.use(cors(
   {
-origin:["http://localhost:3000", "https://task-manager-app.onrender.com"]
+origin:["http://localhost:3000", "https://task-manager-frontend.onrender.com"]
 }
 ));
 app.use("/api/tasks", taskRoutes);
